@@ -1,14 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Currículum vitae de Nicolas Godinez: perfil, experiencia, formación y habilidades.">
+  <meta name="theme-color" content="#173f38">
+  <title>Nicolas Godinez | Currículum vitae</title>
+  <style>
+    :root { --ink: #203932; --muted: #5d6b64; --green: #173f38; --paper: #fffef9; --line: #d9dfd5; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #eceee7; color: var(--ink); font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.65; }
+    a { color: inherit; text-underline-offset: 4px; overflow-wrap: anywhere; }
+    a:hover { color: #397663; }
+    a:focus-visible { outline: 3px solid #b27836; outline-offset: 5px; }
+    .resume { max-width: 1050px; margin: 64px auto; background: var(--paper); box-shadow: 0 16px 60px #2039320d; }
+    .header { padding: 60px 64px 48px; border-top: 7px solid var(--green); }
+    .eyebrow { margin: 0 0 28px; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; }
+    .identity { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    h1 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(42px, 6vw, 66px); font-weight: 400; line-height: 1.05; letter-spacing: -2px; }
+    .role { margin: 18px 0 0; color: var(--muted); font-size: 17px; }
+    .monogram { display: grid; place-items: center; flex: 0 0 94px; height: 94px; border: 1px solid #becbc0; border-radius: 50%; color: var(--green); font-family: Georgia, serif; font-size: 34px; }
+    .content { display: grid; grid-template-columns: 1fr 2fr; border-top: 1px solid var(--line); }
+    aside { padding: 38px 32px 44px 64px; background: #f3f5ed; border-right: 1px solid var(--line); }
+    main { min-width: 0; padding: 38px 64px 44px 44px; }
+    section + section { margin-top: 34px; }
+    h2 { margin: 0 0 20px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+    h3 { margin: 0 0 4px; font-size: 16px; line-height: 1.45; }
+    p { margin: 0 0 12px; }
+    .summary { font-family: Georgia, 'Times New Roman', serif; font-size: 20px; line-height: 1.6; }
+    .contact { margin: 0; font-style: normal; }
+    .contact div + div { margin-top: 17px; }
+    .label { display: block; margin-bottom: 2px; color: var(--muted); font-size: 11px; letter-spacing: .5px; }
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+    .skills li { padding: 4px 10px; border: 1px solid #cbd5c8; border-radius: 3px; font-size: 12px; }
+    .plain-list { padding: 0; margin: 0; list-style: none; }
+    .plain-list li + li { margin-top: 8px; }
+    .muted, .meta { color: var(--muted); }
+    .meta { margin-bottom: 12px; font-size: 13px; }
+    .entry { padding-left: 18px; border-left: 2px solid #c8d3c5; }
+    .entry + .entry { margin-top: 25px; }
+    .entry ul { margin: 10px 0 0; padding-left: 17px; }
+    .entry li + li { margin-top: 6px; }
+    main section + section { padding-top: 30px; border-top: 1px solid var(--line); }
+    footer { display: flex; justify-content: space-between; gap: 16px; padding: 18px 64px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+    footer p { margin: 0; }
+    @media (max-width: 720px) {
+      .resume { margin: 20px; }
+      .header { padding: 34px 28px; }
+      .content { grid-template-columns: 1fr; }
+      aside { padding: 30px 28px; border-right: 0; border-bottom: 1px solid var(--line); }
+      main { padding: 32px 28px; }
+      .monogram { flex-basis: 64px; height: 64px; font-size: 25px; }
+      footer { padding: 18px 28px; flex-direction: column; gap: 5px; }
+    }
+    @media (max-width: 400px) {
+      .resume { margin: 0; }
+      .monogram { display: none; }
+      h1 { font-size: 42px; }
+    }
+    @media print {
+      @page { size: A4; margin: 12mm; }
+      body { background: white; font-size: 11px; }
+      .resume { max-width: none; margin: 0; box-shadow: none; }
+      .header { padding: 24px 28px 26px; }
+      h1 { font-size: 42px; }
+      .eyebrow { margin-bottom: 16px; }
+      .content { grid-template-columns: 1fr 2fr; }
+      aside { padding: 26px 20px; }
+      main { padding: 26px 28px; }
+      .summary { font-size: 16px; }
+      section + section { margin-top: 24px; }
+      main section + section { padding-top: 20px; }
+      .entry { break-inside: avoid; }
+      footer { padding: 14px 28px; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>Nicolas Godinez</p>
-    
+  <!-- Reemplaza los campos entre corchetes por tu información real. -->
+  <article class="resume" aria-label="Currículum vitae de Nicolas Godinez">
+    <header class="header">
+      <p class="eyebrow">Currículum vitae</p>
+      <div class="identity">
+        <div>
+          <h1>Nicolas Godinez</h1>
+          <p class="role">[Tu profesión o especialidad]</p>
+        </div>
+        <div class="monogram" aria-hidden="true">NG</div>
+      </div>
+    </header>
+    <div class="content">
+      <aside aria-label="Información personal y habilidades">
+        <section aria-labelledby="contacto">
+          <h2 id="contacto">Contacto</h2>
+          <address class="contact">
+            <div><span class="label">Ubicación</span>[Ciudad, país]</div>
+            <div><span class="label">Correo electrónico</span>[Tu correo electrónico]</div>
+            <div><span class="label">Teléfono</span>[Tu número de teléfono]</div>
+            <div><span class="label">Portafolio o LinkedIn</span>[Tu dirección web]</div>
+          </address>
+        </section>
+        <section aria-labelledby="habilidades">
+          <h2 id="habilidades">Habilidades</h2>
+          <ul class="skills">
+            <li>[Habilidad 1]</li>
+            <li>[Habilidad 2]</li>
+            <li>[Habilidad 3]</li>
+            <li>[Habilidad 4]</li>
+          </ul>
+        </section>
+        <section aria-labelledby="idiomas">
+          <h2 id="idiomas">Idiomas</h2>
+          <ul class="plain-list">
+            <li>[Idioma] <span class="muted">/ [Nivel]</span></li>
+            <li>[Idioma] <span class="muted">/ [Nivel]</span></li>
+          </ul>
+        </section>
+      </aside>
+      <main>
+        <section aria-labelledby="perfil">
+          <h2 id="perfil">Perfil profesional</h2>
+          <p class="summary">[Describe quién eres, tu especialidad y el valor que puedes aportar a un equipo.]</p>
+          <p class="muted">[Añade tus intereses profesionales y el tipo de oportunidad que buscas.]</p>
+        </section>
+        <section aria-labelledby="experiencia">
+          <h2 id="experiencia">Experiencia</h2>
+          <div class="entry">
+            <h3>[Puesto más reciente]</h3>
+            <p class="meta">[Empresa] · [Inicio – Fin o actualidad]</p>
+            <ul>
+              <li>[Describe tu principal responsabilidad.]</li>
+              <li>[Destaca un logro concreto y su resultado.]</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <h3>[Puesto o proyecto anterior]</h3>
+            <p class="meta">[Empresa o proyecto] · [Inicio – Fin]</p>
+            <p>[Explica tu contribución, las herramientas utilizadas y el resultado.]</p>
+          </div>
+        </section>
+        <section aria-labelledby="formacion">
+          <h2 id="formacion">Formación académica</h2>
+          <div class="entry">
+            <h3>[Título o programa de estudios]</h3>
+            <p class="meta">[Institución] · [Periodo]</p>
+            <p>[Especialidad, curso relevante o reconocimiento.]</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p>Nicolas Godinez · Currículum vitae</p>
+      <p>Plantilla personalizable · Completa los campos entre corchetes</p>
+    </footer>
+  </article>
 </body>
 </html>
-
